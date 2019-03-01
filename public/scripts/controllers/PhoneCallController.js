@@ -88,6 +88,10 @@ function PhoneCallController($scope, $rootScope, $interval, $timeout, $mdDialog,
     $scope.connection.mute(false);
   };
 
+  $scope.changeVolume = function(event) {
+    player.volume = scope.volume; // from 0 to 1
+};
+
   $scope.toggleKeypad = function () {
     if ($scope.mode === 'keypad') {
       $scope.mode = 'status';

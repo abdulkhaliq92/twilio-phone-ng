@@ -106,7 +106,7 @@
                   <md-icon md-svg-src="images/icon-keypad.svg"></md-icon>
                 </md-button>
               </div>
-
+              <input type="range" ng-model="volume" ng-change="changeVolume($event)" step="0.1" min="0" max="1">
             </div>
 
             <div flex="70" class="keypad" layout-wrap layout="row">
