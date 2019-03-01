@@ -8,7 +8,7 @@ const createOrUpdateApplication = function (req, client) {
   if (req.user.configuration.twilio.applicationSid) {
 
     return client.applications(req.user.configuration.twilio.applicationSid).update({
-      friendlyName: 'Twilio Phone Demo',
+      friendlyName: 'Harbinger Demo',
       voiceUrl: voiceUrl,
       voiceMethod: 'POST',
     })
@@ -16,7 +16,7 @@ const createOrUpdateApplication = function (req, client) {
   }
 
   return client.applications.create({
-    friendlyName: 'Twilio Phone Demo',
+    friendlyName: 'Harbinger Demo',
     voiceUrl: voiceUrl,
     voiceMethod: 'POST',
   })
